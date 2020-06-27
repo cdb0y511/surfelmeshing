@@ -84,6 +84,7 @@ with two small additions:
 Without specifying any optional parameters, SurfelMeshing can be run as follows:
 ```
 ./build_RelWithDebInfo/applications/surfel_meshing/SurfelMeshing <dataset> <trajectory>
+./SurfelMeshing /home/vipl/workspace/firelord groundtruth.txt --follow_input_camera false --depth_scaling 1000 --max_pose_interpolation_time_extent 100 --export_point_cloud "final.ply" --outlier_filtering_frame_count 2
 ```
 Here, `<dataset>` is the path to the dataset folder, and `<trajectory>` is the
 filename of the trajectory file within this folder (excluding the rest of the
