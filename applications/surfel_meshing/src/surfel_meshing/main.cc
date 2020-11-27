@@ -1545,12 +1545,10 @@ int LIBVIS_MAIN(int argc, char** argv) {
     }
     
     
-    // ### Handle key presses (in the terminal) ###
-    
+  /*  // ### Handle key presses (in the terminal) ###
     if (step_by_step_playback || (show_result && is_last_frame)) {
       while (true) {
         int key = portable_getch();
-        
         if (key == 10) {
           // Return key.
           if (!(show_result && is_last_frame)) {
@@ -1610,7 +1608,7 @@ int LIBVIS_MAIN(int argc, char** argv) {
           // Try to triangulate the selected surfel in debug mode.
           LOG(INFO) << "Trying to triangulate surfel " << render_window->selected_surfel_index() << " ...";
           surfel_meshing.SetSurfelToRemesh(render_window->selected_surfel_index());
-          surfel_meshing.Triangulate(/* force_debug */ true);
+          surfel_meshing.Triangulate(*//* force_debug *//* true);
           
           shared_ptr<Mesh3fCu8> visualization_mesh(new Mesh3fCu8());
           surfel_meshing.ConvertToMesh3fCu8(visualization_mesh.get(), true);
@@ -1620,7 +1618,7 @@ int LIBVIS_MAIN(int argc, char** argv) {
           const Surfel* surfel = &surfel_meshing.surfels().at(render_window->selected_surfel_index());
           LOG(INFO) << "Retriangulating surfel " << render_window->selected_surfel_index() << " (radius_squared: " << surfel->radius_squared() << ") ...";
           surfel_meshing.RemeshTrianglesAt(const_cast<Surfel*>(surfel), surfel->radius_squared());  // TODO: avoid const_cast
-          surfel_meshing.Triangulate(/* force_debug */ true);
+          surfel_meshing.Triangulate(*//* force_debug *//* true);
           
           shared_ptr<Mesh3fCu8> visualization_mesh(new Mesh3fCu8());
           surfel_meshing.ConvertToMesh3fCu8(visualization_mesh.get(), true);
@@ -1650,7 +1648,7 @@ int LIBVIS_MAIN(int argc, char** argv) {
           keyframes_write_file.flush();
         }
       }
-    }
+    }*/
     
     
     // ### End-of-frame handling ###
