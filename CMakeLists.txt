@@ -62,7 +62,7 @@ find_package(Boost COMPONENTS serialization filesystem system REQUIRED)
 include_directories(${Boost_INCLUDE_DIR})
 
 # Loguru (packaged)
-add_library(loguru SHARED
+add_library(loguru STATIC
   libvis/third_party/loguru/loguru.cpp
 )
 set_property(TARGET loguru PROPERTY FOLDER "libvis/third_party")
